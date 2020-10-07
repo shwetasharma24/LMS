@@ -54,59 +54,13 @@
                       <path fill-rule="evenodd" d="M12.146 6.354l-2.5-2.5.708-.708 2.5 2.5-.707.708zM3 10v.5a.5.5 0 00.5.5H4v.5a.5.5 0 00.5.5H5v.5a.5.5 0 00.5.5H6v-1.5a.5.5 0 00-.5-.5H5v-.5a.5.5 0 00-.5-.5H3z" clip-rule="evenodd"/>
                     </svg>
                   </a></td>
-                  
-                  
-                  
-                  <td><a href="deleteBook?id=${book.id}">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      	<path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
-                    </svg>
-                  </a></td>
-                  
-             
-                   
-                   
-                   
-					
-					<!-- <a href=delete?id=${book.id}> -->
-					
-					<!--  
-                  <td>
-                  	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
-                    	<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      	<path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
-                    	</svg>
-                  	</button>                  	
-                  </td>
-					
-					-->
-					
-					<!-- Modal -->
-					
-					<!-- 
-				  <div id="myModal" class="modal fade" role="dialog">
-  					<div class="modal-dialog">
 
-					-->
-    				<!-- Modal content-->
-    				
-    				<!-- 
-   					 <div class="modal-content">
-      					<div class="modal-header">
-        					<button type="button" class="close" data-dismiss="modal">&times;</button>
-      					</div>
-      					<div class="modal-body">
-        					<p>Are you sure you want to delete this book?</p>
-      					</div>
-      					<div class="modal-footer">
-        					 <a href="deleteBook?id=${book.id}"> Yes </a>
-      					</div>
-    				</div>
-  					</div>
-				</div>
-				
-				-->
-					
+                  <td><a href="delete?id=${book.id}">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+                    </svg>
+                  </a> </td>
+
                 </tr>
              </c:forEach>
             </tbody>
@@ -117,7 +71,7 @@
              <form action="save" method="POST">
                 <div class="form-group">
                   <label for="id">Book ID:</label>
-                  <input type="text" class="form-control" id="id" value="${book.id}" name="id" placeholder="Enter Book ID">
+                  <input type="text" class="form-control" id="id" value="${book.id}" name="id">
                   </div>
                 <div class="form-group">
                   <label for="bookName">Book Name:</label>
@@ -129,7 +83,7 @@
                 </div>
                 <div class="form-group">
                   <label for="purchaseDate">Purchase Date:</label>
-                  <input type="Date" class="form-control" id="purchaseDate" value="${book.purchaseDate}"  name="purchaseDate">
+                  <input type="Date" class="form-control" id="purchaseDate" value="${book.purchaseDate}" placeholder="yyyy-mm-dd" name="purchaseDate">
                  </div>
                 <button type="submit" class="btn btn-default">Submit</button>
               </form>

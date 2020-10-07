@@ -3,6 +3,8 @@ package com.lms.models;
 import javax.persistence.*;
 import java.util.Date;
 
+
+
 //Database name= lmsdb
 
 @Entity( name="lms_tbl")
